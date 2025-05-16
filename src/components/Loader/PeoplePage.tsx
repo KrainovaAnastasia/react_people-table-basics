@@ -58,7 +58,7 @@ export const PeoplePage: React.FC = () => {
 
               <tbody>
                 {people.map(person => {
-                  const isSelcted = person.slug === slug;
+                  const isSelected = person.slug === slug;
                   const mother =
                     people.find(p => p.name === person.motherName) || null;
                   const father =
@@ -68,7 +68,7 @@ export const PeoplePage: React.FC = () => {
                     <tr
                       key={person.slug}
                       data-cy="person"
-                      className={isSelcted ? 'has-background-warning' : ''}
+                      className={isSelected ? 'has-background-warning' : ''}
                     >
                       <td>
                         <PersonLink person={person} />
